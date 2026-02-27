@@ -131,6 +131,6 @@ in
       let
         pkgs = import nixpkgsInput { inherit system; };
       in
-      pkgs.nixfmt-rfc-style
+      if pkgs ? nixfmt-tree then pkgs.nixfmt-tree else pkgs.nixfmt
     );
 }
