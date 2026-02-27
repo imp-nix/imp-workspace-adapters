@@ -23,16 +23,11 @@
       bevy = [
         "wayland"
         "libxkbcommon"
-        "alsa-lib"
-        "udev"
         "libx11"
         "libxcursor"
         "libxi"
         "libxrandr"
         "vulkan-loader"
-        "vulkan-headers"
-        "vulkan-tools"
-        "vulkan-validation-layers"
       ];
     };
   };
