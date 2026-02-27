@@ -14,7 +14,9 @@ adapter/runtime repo for `imp.lib.mkWorkspaceFlakeOutputs` standalone mode
 * `workspaceRuntimes.python`
 * `workspacePolicy`
 * `workspaceAdapters`
+* `monorepoAdapters`
 * `lib.mkRuntime`
+* `lib.monorepoAdapters`
 
 ## usage with imp-nix
 

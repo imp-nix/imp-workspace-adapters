@@ -6,6 +6,7 @@
   outputs = { nixpkgs, ... }:
     let
       mkRuntime = import ./lib/mk-runtime.nix;
+      monorepoAdapters = import ./monorepo/adapters;
       workspaceRuntime = mkRuntime {
         inherit nixpkgs;
       };
@@ -27,10 +28,12 @@
     {
       lib = {
         inherit mkRuntime;
+        inherit monorepoAdapters;
       };
 
       inherit workspaceRuntime workspaceRuntimes;
       workspacePolicy = workspaceRuntime.policy;
       workspaceAdapters = workspaceRuntime.adapters;
+      inherit monorepoAdapters;
     };
 }
